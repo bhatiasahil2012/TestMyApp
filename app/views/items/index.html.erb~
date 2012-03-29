@@ -1,0 +1,55 @@
+<html>
+<style>
+h2
+{
+color:red;}
+</style>
+<h1>List Of Items</h1>
+<body>
+	
+	<table>
+		<tr>
+			<th>Item Name</th>
+			<th>Price</th>
+			<th>View</th>
+			<th>Edit</th>
+			<th>Delete</th>
+		</tr>
+		<tr>
+			<% if @item %>
+				<% @item.each do |i| %>
+					<tr>
+						<td>
+							<%=i.name%>
+						</td>
+						<td>
+							<%=i.price.to_s%>
+						</td>
+						<td>
+							<%= link_to 'View' , :controller => 'items', :action => 'show' ,:id=>i.id %>	
+						</td>
+						<td>
+							<%= link_to 'Edit' , :controller => 'items', :action => 'edit' ,:id=>i.id %>
+						</td>
+						<td>
+							<%= link_to 'Delete' , :controller => 'items', :action => 'delete' ,:id=>i.id %>
+						</td>
+					</tr>
+				<% end %>
+			<% else %>
+				<h1>No records found </h1>
+			<%end%>
+					
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+			<td><%= link_to 'New Item' , <%=render :partial=>'new'%> %></td>
+		</tr>
+	</table>
+	
+
+
+	
+</body>
+</html>

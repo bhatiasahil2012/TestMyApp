@@ -1,0 +1,35 @@
+<html>
+	<head>
+	</head>
+<body>
+	<form name="friend" action="/friend" method="post">
+	<table>
+		<tr>
+			<td align="right">
+				<label>Name *:</label>
+			</td>
+			<td align="left">
+				<input type="text" name="name" id="name" />
+			</td>
+		</tr>
+		<tr>
+			<td align="right">
+				<label>Address *:</label>
+			</td>
+			<td align="left">
+				<input type="text" name="address" id ="address" />
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td align="left">
+				<input type="submit" value="Submit" />
+			</td>
+		</tr>
+
+	</table>
+	</form>
+</body>
+</html>
+

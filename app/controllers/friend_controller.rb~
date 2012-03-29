@@ -1,0 +1,13 @@
+class FriendController < ApplicationController
+def new
+@friends = Friends.new
+end
+def create
+@friends = Friends.new(params[:friends])
+if @friends.save
+redirect_to friend_path, :notice => 'friend successfully added.'
+else
+render :action => 'new'
+end
+end
+end

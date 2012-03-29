@@ -1,0 +1,36 @@
+<h1>Subject Management</h1>
+<%=form_for(@subjects) do |subject|%>
+	<% if @subjects.errors.any? %>
+		<% s = @subjects.errors.full_messages%>				
+	<% else %>
+			<li><%=flash[:message]%></li>
+	<% end %>
+	
+	<table>
+		<tr>
+			<td><%=subject.label :Name%></td>
+			<td><%=subject.text_field :name%></td><td>
+				<%if !s.nil?%>
+				<label style="Color:red"><%=s[0]%></label>
+				<% end %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td><label>Course</label></td>
+			<td><%=subject.text_field :course%></td><td><%if !s.nil?%>
+				<label style="Color:red"><%=s[1]%></label>
+				<% end %>
+			</td>
+		</tr>
+		<tr>
+			
+			<td></td>
+			<td><%= subject.submit %></td>
+		</tr>
+		
+		
+		
+	</table>
+<% end %>
+	

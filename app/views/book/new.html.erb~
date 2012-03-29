@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Book Details</title>
+</head>
+<body>
+<form name="test" action="create">
+<h1>Add new book</h1>
+<table>
+<tr>
+	<td align="right">
+		<label for="book_title">Title* :</label>
+	</td>
+	<td align="left">
+		<%= text_field_tag 'title', 'title' %>
+	</td>
+</tr>
+<tr>
+	<td align="right">
+		<label for="book_author">Author* :</label>
+	</td>
+	<td align="left">
+		<%= text_field_tag 'author', 'author' %>
+	</td>
+</tr>
+<tr>
+	<td align="right">
+	</td>
+	<td align="left">
+		<%= submit_tag "Submit" %>
+	</td>
+	
+</tr>
+
+</table>
+</form>
+</body>
+</html>
+
+
+
+
+

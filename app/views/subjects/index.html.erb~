@@ -1,0 +1,30 @@
+<h1>Subject Details</h1>
+<table>
+<%if @subjects %>
+	<tr>
+				<th>Name</th>
+				<th>Course</th>
+				<th>View</th>
+				<th>Edit</th>
+				<th>Delete</th>
+			</tr>
+			
+	<% @subjects.each do |subject| %>
+		
+			<tr>
+				<td><%=subject.name%></td>
+				<td><%=subject.course%></td>
+				<td><%= link_to 'view' , :controller => "subjects" , :action => 'show' , :id => subject.id%></td>
+				<td><%= link_to 'edit' , :controller => "subjects" , :action => 'edit' , :id => subject.id%></td>
+				<td><%= link_to 'delete',:controller => "subjects" , :action => 'delete' , :id => subject.id%></td>
+				
+			</tr>
+			
+	<% end %>
+	<tr>
+				<td><%=link_to 'New Item' ,:action => 'new'%></td>
+			</tr>
+	
+	</table>
+	
+<% end %>

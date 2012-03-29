@@ -1,0 +1,23 @@
+<h1>Items Details </h1>
+
+<html>
+<table>
+	<tr>
+		<td>
+			<strong>Item Name:</strong>
+		</td>
+		<td>
+			 <%= @item.name %>
+		</td>
+	</tr>
+	<tr>	
+		<td><strong>Price:</strong></td><td><%= @item.price %></td>
+		
+	</tr>  
+	<tr>
+	</tr>
+	<tr>
+		<td><%= link_to 'back', items_path%></td><td></td>
+	</tr>
+</table>
+</html>

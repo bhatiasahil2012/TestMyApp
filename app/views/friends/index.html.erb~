@@ -1,0 +1,8 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<h1>Welcome to the rails word</h1>
+<a href="/friends/new">new</a>
+	</body>
+</html>

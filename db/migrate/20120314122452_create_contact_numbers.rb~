@@ -1,0 +1,8 @@
+class CreateContactNumbers < ActiveRecord::Migration
+  def change
+    create_table :contact_numbers do |t|
+      t.integer :friends_id
+      t.timestamps
+    end
+  end
+end
